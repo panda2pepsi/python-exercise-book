@@ -20,4 +20,12 @@ def gen_coupon(qty, prefix):
     return tmp_list
 
 coupon_list = gen_coupon(coupon_qty, coupon_prefix)
-print(coupon_list)
+
+def save_coupon(list):
+    path = r"E:\Codes\Python\Internet_Projects\Exercise Book\0001_coupon_out.txt"
+    with open(path, "w+") as f:
+        for i in coupon_list:
+            f.write(i+"\n")
+        print("success")
+
+save_coupon(coupon_list)
